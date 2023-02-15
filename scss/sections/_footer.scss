@@ -1,0 +1,123 @@
+@use'../custom' as *;
+@use'../components/mixins' as *;
+
+.footer{
+    background: $footer;
+    padding-top: 1rem;
+
+
+    a{
+        text-decoration: none;
+
+    }
+}
+
+.contact-box{
+
+    &--icon{
+        width: 2rem;
+        stroke: $primary;
+        padding-top: .5rem;
+        margin-right: .4rem;
+
+        @include media-breakpoint-up(sm){
+            width: 4rem;
+        }
+    }
+
+    &--info{
+
+
+        &--title{
+            font-size: 1rem;
+            font-weight: 600;
+
+            @include media-breakpoint-up(sm){
+                font-size: 1.4rem;
+            }
+            
+        }
+
+        &--subtitle{
+            color: $gray-600;
+            font-size: 0.8rem;
+
+            @include media-breakpoint-up(sm){
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+.footer-sm{
+
+    a{
+        color: $white;
+        font-size: 1rem;
+        margin-right: 1rem;
+
+        @include media-breakpoint-up(sm){
+            font-size: 1.6rem;
+        }
+
+        &:hover{
+            color: $primary;
+        }
+    }
+}
+
+.footer-menu-list{
+
+
+
+        li{
+            margin-bottom: 0.5rem;
+
+            a{
+                color: $white;
+
+                &:hover{
+                    color: $primary;
+                }
+            }
+        }
+}
+
+.copyright{
+    background: $black;
+    padding: 3rem;
+    
+    p{
+        font-weight: 400;
+        color: $gray-600;
+
+
+        a{
+            color: $gray-300;
+
+            &:hover{
+                color: $primary;
+            }
+        }
+    }
+
+    
+}
+
+// BACK TO TOP
+
+.back-to-top{
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    right: 1.875rem;
+    bottom: 1.875rem;
+    z-index: 9999;
+    background: $primary;
+
+    i{
+        color: $white;
+        font-size: 1rem;
+        @include absoluteCenter;
+    }
+}
